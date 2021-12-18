@@ -112,6 +112,12 @@ const BlogsWrapper = styled.section`
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 425px) {
+		grid-template-columns: 1fr;
+	}
 `
 
 const BlogSection = () => {

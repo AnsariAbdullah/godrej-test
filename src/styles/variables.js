@@ -24,6 +24,14 @@ const Buttons = styled.button`
 const Container = styled.section`
 	width: 1024px;
 	margin: 0 auto;
+	@media (max-width: 768px) {
+		width: 768px;
+		padding: 20px;
+	}
+	@media (max-width: 425px) {
+		width: 100%;
+	}
+	
 `;
 
 const Title = styled.p`
@@ -35,6 +43,9 @@ const Title = styled.p`
 		background-color: ${colors.red};
 		padding: 2px;
     margin-right: 10px;
+	}
+	@media (max-width: 425px) {
+		font-size: 40px;
 	}
 `
 

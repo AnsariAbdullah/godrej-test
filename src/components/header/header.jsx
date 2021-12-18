@@ -10,6 +10,9 @@ const HeaderWrapper = styled.nav`
 	align-items: center;
 	color: ${colors.white};
   padding: 15px 30px;
+	.mobile-menu{
+		display: none;
+	}
 	.links{
     display: flex;
 		ul{
@@ -33,6 +36,14 @@ const HeaderWrapper = styled.nav`
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		.mobile-menu{
+			display: block;
+		}
+		.links{
+			display: none
+		}
+	}
 `
 
 const Header = () => {
@@ -41,6 +52,21 @@ const Header = () => {
 			<div className="logo-wrapper">
 				<Link to="/">
 					<img src={LogoImage} alt="Logo" />
+				</Link>
+			</div>
+			<div className="mobile-menu">
+				<Link to="/blog">
+					<svg id="Group_14699" data-name="Group 14699" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+						<g id="Ellipse_611" data-name="Ellipse 611" fill="none" stroke="#fff" strokeWidth="1.5">
+							<circle cx="17.5" cy="17.5" r="17.5" stroke="none"/>
+							<circle cx="17.5" cy="17.5" r="16.75" fill="none"/>
+						</g>
+						<g id="left-arrow_1_" data-name="left-arrow (1)" transform="translate(14.666 12)">
+							<g id="Group_4392" data-name="Group 4392">
+								<path id="Path_13023" data-name="Path 13023" d="M107.539,5.882,102.43.773a.452.452,0,1,1,.64-.64L108.5,5.562a.452.452,0,0,1,0,.64l-5.429,5.429a.452.452,0,0,1-.64-.64Z" transform="translate(-102.298 0)" fill="#fff" stroke="#fff" strokeWidth="1"/>
+							</g>
+						</g>
+					</svg>
 				</Link>
 			</div>
 			<div className="links">

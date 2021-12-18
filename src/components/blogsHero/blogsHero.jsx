@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const BlogHeroWrapper = styled.section`
 	.container {
 		position: relative;
+		overflow: hidden;
 		.image {
 			display: block;
 			width: 100%;
@@ -43,6 +44,13 @@ const BlogHeroWrapper = styled.section`
 				position: absolute;
 				bottom: 50px;
 				right: 80px;
+			}
+		}
+	}
+	@media (max-width: 425px) {
+		.container{
+			.image{
+				width: 400%;
 			}
 		}
 	}

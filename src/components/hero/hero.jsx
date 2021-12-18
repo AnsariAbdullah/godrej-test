@@ -7,6 +7,7 @@ import styled from 'styled-components';
 const HeroWrapper = styled.section`
 	.container {
 		position: relative;
+		overflow: hidden;
 		.image {
 			display: block;
 			width: 100%;
@@ -33,6 +34,12 @@ const HeroWrapper = styled.section`
 					font-size: 100px;
 					margin-bottom: 20px;
 					font-family: 'Inria Serif', serif;
+					@media (max-width: 768px) {
+						font-size: 40px;
+					}
+					@media (max-width: 425px) {
+						font-size: 25px 0;
+					}
 				}
 				.sub-text {
 					font-size: 14px;
@@ -44,6 +51,23 @@ const HeroWrapper = styled.section`
 				position: absolute;
 				bottom: 50px;
 				right: 80px;
+				@media (max-width: 768px) {
+					display: none;
+				}
+			}
+		}
+	}
+	@media (max-width: 425px) {
+		.container{
+			.image{
+				width: 400%;
+			}
+			.overlay{
+				.text {
+					button{
+						display: none;
+					}
+				}
 			}
 		}
 	}

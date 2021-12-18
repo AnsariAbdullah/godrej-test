@@ -26,6 +26,20 @@ const AboutWrapper = styled.div`
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		padding: 95px 0;
+		.conatiner{
+			flex-direction: column;
+			.left{
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 40px;
+			}
+			.right{
+				width: 100%;
+			}
+		}
+	}
 `
 
 const About = () => {

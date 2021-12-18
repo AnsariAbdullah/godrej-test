@@ -5,10 +5,13 @@ import { colors } from '../../styles/variables';
 const FooterWrapper = styled.footer`
 	font-size: 14px;
 	padding: ${props => props.home ? '50px 0 100px' : '80px 0'};
-	
 	text-align: center;
 	border-top: 0.3px solid ${colors.gray};
 	background: ${props => props.home ? colors.secondaryBackground : colors.white};
+	
+	@media (max-width: 425px) {
+		font-size: 12px;
+	}
 `
 
 const Footer = (props) => {

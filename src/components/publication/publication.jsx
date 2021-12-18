@@ -37,6 +37,24 @@ const PublicationWrapper = styled.section`
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		padding: 95px 0;
+	}
+	@media (max-width: 425px) {
+		padding: 25px 0;
+		.content{
+			.info-wrapper{
+				display: block;
+				.left{
+					width: 100%;
+				}
+				.right{
+					width: 100%;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
 `
 
 const Publication = () => {
