@@ -5,7 +5,7 @@ import Blog2 from '../../assets/blog2.png';
 import Blog3 from '../../assets/blog3.png';
 import Author from '../../assets/author.svg';
 import Date from '../../assets/date.svg';
-import { colors, Title, Container } from '../../styles/variables';
+import { colors } from '../../styles/variables';
 
 const data = [
 	{
