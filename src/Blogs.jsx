@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Hero from './components/hero';
+import BlogsHero from './components/blogsHero';
 import Footer from './components/footer';
 import BlogSection from './components/blogSection';
-import { colors, Title, Container } from './styles/variables';
+import { Title, Container } from './styles/variables';
 
 const BlogsWrapper = styled.div`
 	.container{
@@ -19,7 +19,7 @@ const BlogsWrapper = styled.div`
 const Blogs = () => {
 	return (
 		<BlogsWrapper>
-			<Hero />
+			<BlogsHero />
 			<Container className="container">
 				<div className="title-wrapper">
 					<Title>Blogs</Title>

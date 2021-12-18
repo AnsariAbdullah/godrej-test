@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Blog1 from '../../assets/blog1.png';
 import Blog2 from '../../assets/blog2.png';
 import Blog3 from '../../assets/blog3.png';
+import Author from '../../assets/author.svg';
+import Date from '../../assets/date.svg';
 import { colors, Title, Container } from '../../styles/variables';
 
 const data = [
@@ -93,10 +95,19 @@ const BlogsWrapper = styled.section`
 		}
 		.other{
 			margin-top: 25px;
-			.details{
-				p{
-					font-size: 12px;
-					color: ${colors.gray};
+			.details-wrapper{
+				.details{
+					display: flex;
+					align-items: center;
+					margin-bottom: 5px; 
+					img{
+						width: 15px;
+					}
+					p{
+						margin-left: 5px;
+						font-size: 12px;
+						color: ${colors.gray};
+					}
 				}
 			}
 		}
@@ -115,9 +126,15 @@ const BlogSection = () => {
 					<p className="card-title">{item.title1}</p>
 					<p className="card-title">{item.title2}</p>
 					<div className="other">
-						<div className="details">
-							<p>{item.date}</p>
-							<p>{item.author}</p>
+						<div className="details-wrapper">
+							<div className="details">
+								<img src={Date} alt="date" />
+								<p>{item.date}</p>
+							</div>
+							<div className="details">
+								<img src={Author} alt="author" />
+								<p>{item.author}</p>
+							</div>
 						</div>
 					</div>
 				</div>
