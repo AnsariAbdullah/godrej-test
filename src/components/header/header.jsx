@@ -1,6 +1,7 @@
 import React from 'react';
 import LogoImage from '../../assets/logo.svg';
 import { colors, Buttons } from '../../styles/variables';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.nav`
@@ -19,9 +20,14 @@ const HeaderWrapper = styled.nav`
 			li {
 				font-size: 14px;
 				margin-right: 30px;
+				a{
+					text-decoration: none;
+    			color: ${colors.white};
+				}
 				.link-btn{
 					font-weight: 400;
 					padding: 5px 20px;
+					text-transform: capitalize;
 					background: ${colors.orange}
 				}
 			}
@@ -37,15 +43,15 @@ const Header = () => {
 			</div>
 			<div className="links">
 				<ul>
-					<li>Who We Are</li>
-					<li>What We Do</li>
-					<li>What We Offer</li>
-					<li>Archive Tales</li>
-					<li>Media</li>
-					<li>Contact Us</li>
-					<li>
+					<li><Link>Who We Are</Link></li>
+					<li><Link>What We Do</Link></li>
+					<li><Link>What We Offer</Link></li>
+					<li><Link>Archive Tales</Link></li>
+					<li><Link>Media</Link></li>
+					<li><Link>Contact Us</Link></li>
+					<li><Link>
 						<Buttons className="link-btn">Contribute</Buttons>
-					</li>
+					</Link></li>
 				</ul>
 				<svg xmlns="http://www.w3.org/2000/svg" width="18.5" height="18.496" viewBox="0 0 18.5 18.496">
 					<g id="search-svgrepo-com" transform="translate(0.25 0.2)">

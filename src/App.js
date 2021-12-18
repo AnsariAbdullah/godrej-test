@@ -1,12 +1,12 @@
 import React from 'react';
 import Hero from './components/hero';
-import { Link } from "react-router-dom";
+import About from './components/about';
 
 function App() {
   return (
     <div className="App">
 			<Hero />
-			<Link to="/blogs">Blogs</Link>
+			<About />
     </div>
   );
 }

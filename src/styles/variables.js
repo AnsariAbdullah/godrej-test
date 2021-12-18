@@ -6,37 +6,39 @@ const colors = {
 	orange: '#FFAA00',
 	background: '#FFE5C4',
 	dark: '#2F2F2F',
-
-  // error
-  error: '#ff6c56',
-
-  // Blue
-  blue: {
-    primary: '#2c86ff',
-    secondary: '#559eff',
-    navy: '#0c1d33',
-    shadeOne: '#6faaff',
-  },
-
-  // Black
-  black: {
-    default: '#000',
-    main: '#121212',
-  },
+	secondaryBackground: '#FFE5C4',
 };
 
 const Buttons = styled.button`
 	font-weight: bold;
   padding: 15px 40px;
 	border-radius: 25px;
-	color: ${colors.white};
-	border: none;
+	text-transform: uppercase;
+	border: ${props => props.secondary ? '2px solid' + colors.dark : "none"};
 	background: ${props => props.primary ? colors.red : "transparent"};
-	/* background: ${colors.orange}
-  color: ${props => props.primary ? "white" : "palevioletred"}; */
+  color: ${props => props.secondary ? colors.dark : colors.white};
 `;
+
+
+const Container = styled.section`
+	width: 1024px;
+	margin: 0 auto;
+`;
+
+const Title = styled.p`
+	font-size: 60px;
+	font-family: 'Inria Serif', serif;
+	&:before {
+		content: "";
+		background-color: ${colors.red};
+		padding: 2px;
+    margin-right: 10px;
+	}
+`
 
 export {
 	colors,
-	Buttons
+	Buttons,
+	Container,
+	Title
 }
