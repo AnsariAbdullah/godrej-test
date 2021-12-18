@@ -6,6 +6,7 @@ const colors = {
 	orange: '#FFAA00',
 	background: '#FFE5C4',
 	dark: '#2F2F2F',
+	gray: '#797979',
 	secondaryBackground: '#FFE5C4',
 };
 
@@ -27,6 +28,7 @@ const Container = styled.section`
 
 const Title = styled.p`
 	font-size: 60px;
+	text-transform: uppercase;
 	font-family: 'Inria Serif', serif;
 	&:before {
 		content: "";
