@@ -39,7 +39,9 @@ const Header = () => {
 	return (
 		<HeaderWrapper>
 			<div className="logo-wrapper">
-				<img src={LogoImage} alt="Logo" />
+				<Link to="/">
+					<img src={LogoImage} alt="Logo" />
+				</Link>
 			</div>
 			<div className="links">
 				<ul>
