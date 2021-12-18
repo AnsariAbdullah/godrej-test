@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import BlogsHero from './components/blogsHero';
 import Footer from './components/footer';
 import BlogSection from './components/blogSection';
+import SearchBox from './components/searchBox';
 import { Title, Container } from './styles/variables';
 
 const BlogsWrapper = styled.div`
 	.container{
 		.title-wrapper{
-			margin: 120px 40px;
+			margin: 120px 40px 60px;
 			.title-info{
 				margin-top: 40px;
 			}
@@ -28,6 +29,8 @@ const Blogs = () => {
 					</p>
 				</div>
 				
+				<SearchBox />
+
 				<BlogSection />
 
 			</Container>
